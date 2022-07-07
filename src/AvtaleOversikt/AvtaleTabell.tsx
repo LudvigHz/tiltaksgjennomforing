@@ -135,7 +135,7 @@ const AvtaleTabell: FunctionComponent<{
                                     if (
                                         innloggetBruker.rolle === 'MENTOR' &&
                                         avtale.tiltakstype === 'MENTOR' &&
-                                        avtale.erGodkjentTaushetserklæringAvMentor === false
+                                        !avtale.erGodkjentTaushetserklæringAvMentor
                                     ) {
                                         togglesetTaushetserklæringForMentorAvtale(avtale);
                                         e.preventDefault();
