@@ -41,7 +41,7 @@ const VarighetOppsummering: FunctionComponent<Varighet> = ({
                         <Element>Sluttdato</Element>
                         <SjekkOmVerdiEksisterer verdi={harDato(sluttDato)} />
                     </Column>
-                    {avtaleContext.avtale.tiltakstype !== 'MENTOR' && (
+                    {avtaleContext.avtale && avtaleContext.avtale.tiltakstype !== 'MENTOR' && (
                         <Column md="4" sm="12" xs="12">
                             <Element>Stillingsprosent</Element>
                             <SjekkOmVerdiEksisterer verdi={stillingProsent} />
@@ -52,7 +52,7 @@ const VarighetOppsummering: FunctionComponent<Varighet> = ({
                         <SjekkOmVerdiEksisterer verdi={stillingProsent} />
                     </Column>
                 </Row>
-                {avtaleContext.avtale.tiltakstype !== 'MENTOR' && (
+                {avtaleContext.avtale && avtaleContext.avtale.tiltakstype !== 'MENTOR' && (
                     <Row className={''}>
                         <Column md="4" sm="12" xs="12">
                             <Element>Antall dager per uke</Element>
