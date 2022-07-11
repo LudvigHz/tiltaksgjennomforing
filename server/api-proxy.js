@@ -3,7 +3,7 @@ const tokenx = require('./tokenx')
 
 const setup = (app, tokenxClient) => {
     app.use('/tiltaksgjennomforing/api', (req, res, next) => {
-        if (!req.headers['authorization']) {
+        if (!req.path.includes("feature?") && !req.headers['authorization']) {
             res.status(401).send();
         } else {
             next();

@@ -295,13 +295,7 @@ export const settAlleVarselerTilLest = async (varselIder: string[]): Promise<voi
 };
 
 export const hentFeatureToggles = async (featureToggles: Feature[]): Promise<FeatureToggles> => {
-    const unprotectedApi = axios.create({
-        baseURL: '/tiltaksgjennomforing/api',
-        withCredentials: false,
-        headers: { Pragma: 'no-cache', 'Cache-Control': 'no-cache', 'Content-Type': 'application/json' },
-    });
-    const response = await unprotectedApi.get(featureTogglePath(featureToggles));
-
+    const response = await api.get(featureTogglePath(featureToggles));
     return response.data;
 };
 export const hentFeatureTogglesVarianter = async (featureToggles: Feature[]): Promise<Variants> => {
