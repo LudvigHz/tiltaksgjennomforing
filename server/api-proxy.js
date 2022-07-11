@@ -3,7 +3,7 @@ const tokenx = require('./tokenx')
 
 const setup = (app, tokenxClient) => {
     app.use('/tiltaksgjennomforing/api', (req, res, next) => {
-        if (!req.path.includes("feature") && !req.headers['authorization']) {
+        if (!req.originalUrl.includes("feature") && !req.headers['authorization']) {
             res.status(401).send();
         } else {
             next();
@@ -18,7 +18,7 @@ const setup = (app, tokenxClient) => {
             },
             proxyReqOptDecorator: async (options, req) => {
                 const accessToken = await tokenx.getTokenExchangeAccessToken(tokenxClient, req);
-                if(!req.path.includes("feature")) options.headers.Authorization = `Bearer ${accessToken}`;
+                if(!req.originalUrl.includes("feature")) options.headers.Authorization = `Bearer ${accessToken}`;
                 return options;
             },
         })
