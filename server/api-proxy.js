@@ -20,7 +20,6 @@ const setup = (app, tokenxClient) => {
               if(!req.originalUrl.includes("feature")){
                 const accessToken = await tokenx.getTokenExchangeAccessToken(tokenxClient, req);
                 options.headers.Authorization = `Bearer ${accessToken}`;
-
               }
               return options;
             },
