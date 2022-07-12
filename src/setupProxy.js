@@ -2,6 +2,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const fetch = require('node-fetch');
 const whitelist = require('./whitelist');
 const apiProxy = require('../server/api-proxy');
+const proxy = require("express-http-proxy");
 //const tokenx = require('../server/tokenx');
 
 const brukLokalLogin = process.env.NODE_ENV === 'development';
@@ -112,7 +113,14 @@ module.exports = function (app) {
 
     if (process.env.NAIS_CLUSTER_NAME === 'dev-gcp' || process.env.NAIS_CLUSTER_NAME === 'prod-gcp') {
         //gcpTokenExchange();
-        console.log("HALLO ",process.env.NAIS_CLUSTER_NAME );
+        app.use(
+            '/tiltaksgjennomforing/api',
+            proxy(process.env.APIGW_URL, {
+                proxyReqPathResolver: (req) => {
+                    return req.originalUrl.replace("/tiltaksgjennomforing/api", "/tiltaksgjennomforing-api");
+                }
+            })
+        );
     } else {
         if (envProperties.APIGW_HEADER) {
             apiProxyConfig.headers = {
