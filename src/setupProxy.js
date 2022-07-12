@@ -107,20 +107,12 @@ module.exports = function (app) {
     };
 
     const gcpTokenExchange = async () => {
-    //    const tokenxAuthClient = await tokenx.client();
+        const tokenxAuthClient = await tokenx.client();
         apiProxy.setup(app, tokenxAuthClient);
     };
 
     if (process.env.NAIS_CLUSTER_NAME === 'dev-gcp' || process.env.NAIS_CLUSTER_NAME === 'prod-gcp') {
-        //gcpTokenExchange();
-        app.use(
-            '/tiltaksgjennomforing/api',
-            proxy(process.env.APIGW_URL, {
-                proxyReqPathResolver: (req) => {
-                    return req.originalUrl.replace("/tiltaksgjennomforing/api", "/tiltaksgjennomforing-api");
-                }
-            })
-        );
+        gcpTokenExchange();
     } else {
         if (envProperties.APIGW_HEADER) {
             apiProxyConfig.headers = {
