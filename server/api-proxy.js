@@ -15,14 +15,14 @@ const setup = (app, tokenxClient) => {
         proxy(process.env.APIGW_URL, {
             proxyReqPathResolver: (req) => {
                 return req.originalUrl.replace("/tiltaksgjennomforing/api", "/tiltaksgjennomforing-api");
-            },
+            }/*,
             proxyReqOptDecorator: async (options, req) => {
               if(!req.originalUrl.includes("feature")){
                 const accessToken = await tokenx.getTokenExchangeAccessToken(tokenxClient, req);
                 options.headers.Authorization = `Bearer ${accessToken}`;
               }
               return options;
-            },
+            },*/
         })
     );
 };
