@@ -2,8 +2,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const fetch = require('node-fetch');
 const whitelist = require('./whitelist');
 const apiProxy = require('../server/api-proxy');
-const proxy = require("express-http-proxy");
-//const tokenx = require('../server/tokenx');
+const tokenx = require('../server/tokenx');
 
 const brukLokalLogin = process.env.NODE_ENV === 'development';
 
