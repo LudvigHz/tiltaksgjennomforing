@@ -107,7 +107,7 @@ module.exports = function (app) {
 
     const gcpTokenExchange = async () => {
         const tokenxAuthClient = await tokenx.client();
-        apiProxy.setup(app, tokenxAuthClient);
+        //apiProxy.setup(app, tokenxAuthClient);
     };
 
     if (process.env.NAIS_CLUSTER_NAME === 'dev-gcp' || process.env.NAIS_CLUSTER_NAME === 'prod-gcp') {
