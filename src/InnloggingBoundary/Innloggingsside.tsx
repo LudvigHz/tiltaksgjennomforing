@@ -17,8 +17,6 @@ import { useCookies } from 'react-cookie';
 import MediaQuery from 'react-responsive';
 import { Link } from 'react-router-dom';
 import './Innloggingsside.less';
-import {FeatureToggleContext} from "@/FeatureToggleProvider";
-import {Feature} from "@/FeatureToggleProvider";
 
 const cls = BEMHelper('innloggingsside');
 
@@ -26,9 +24,9 @@ const Innloggingsside = (props: { innloggingskilder: Innloggingskilde[] }) => {
     const throwError = useAsyncError();
     const [, setCookie] = useCookies();
     const visFeilmelding = useContext(FeilVarselContext);
-    const featureToggleContext = useContext(FeatureToggleContext);
+  //  const featureToggleContext = useContext(FeatureToggleContext);
   //  const mentorToggle = featureToggleContext[Feature.Mentor];
-    console.log("ENV: **** ",window.location.href.includes("tiltaksgjennomforing.dev.nav.no") );
+   // console.log("ENV: **** ",window.location.href.includes("tiltaksgjennomforing.dev.nav.no") );
     const mentorVisesIdevOmFeatureToggleIkkeKanNås = window.location.href.includes("tiltaksgjennomforing.dev.nav.no");
     const loginKlikk = async (innloggingskilde: Innloggingskilde) => {
         try {
