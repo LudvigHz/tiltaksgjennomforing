@@ -27,7 +27,7 @@ const Innloggingsside = (props: { innloggingskilder: Innloggingskilde[] }) => {
     const [, setCookie] = useCookies();
     const visFeilmelding = useContext(FeilVarselContext);
     const featureToggleContext = useContext(FeatureToggleContext);
-    const mentorToggle = featureToggleContext[Feature.Mentor];
+  //  const mentorToggle = featureToggleContext[Feature.Mentor];
     console.log("ENV: **** ",window.location.href.includes("tiltaksgjennomforing.dev.nav.no") );
     const mentorVisesIdevOmFeatureToggleIkkeKanNås = window.location.href.includes("tiltaksgjennomforing.dev.nav.no");
     const loginKlikk = async (innloggingskilde: Innloggingskilde) => {
