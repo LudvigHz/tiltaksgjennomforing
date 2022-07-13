@@ -28,7 +28,8 @@ const Innloggingsside = (props: { innloggingskilder: Innloggingskilde[] }) => {
     const visFeilmelding = useContext(FeilVarselContext);
     const featureToggleContext = useContext(FeatureToggleContext);
     const mentorToggle = featureToggleContext[Feature.Mentor];
-    console.log("ENV: **** ",process.env );
+    console.log("ENV: **** ",window.location.href.includes("tiltaksgjennomforing.dev.nav.no") );
+    const mentorVisesIdevOmFeatureToggleIkkeKanNås = window.location.href.includes("tiltaksgjennomforing.dev.nav.no");
     const loginKlikk = async (innloggingskilde: Innloggingskilde) => {
         try {
             await hentInnloggetBruker();
@@ -47,7 +48,7 @@ const Innloggingsside = (props: { innloggingskilder: Innloggingskilde[] }) => {
     const logginnknapper = props.innloggingskilder.map((innlogginskilde: Innloggingskilde) => (
         <Hovedknapp
             key={innlogginskilde.part}
-            style={innlogginskilde.part === "MENTOR" ? (!mentorToggle ? {display:"none"}: {}): {}} //TODO: MENTOR TOGGLE her!
+            style={innlogginskilde.part === "MENTOR" ? ((!mentorToggle || !mentorVisesIdevOmFeatureToggleIkkeKanNås) ? {display:"none"}: {}): {}} //TODO: MENTOR TOGGLE her!
             className="innloggingsside__logginnKnapp"
             onClick={() => {
                 setCookie(INNLOGGET_PART, innlogginskilde.part, { path: '/tiltaksgjennomforing' });
