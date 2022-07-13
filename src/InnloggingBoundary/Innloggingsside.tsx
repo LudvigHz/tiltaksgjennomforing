@@ -48,7 +48,7 @@ const Innloggingsside = (props: { innloggingskilder: Innloggingskilde[] }) => {
     const logginnknapper = props.innloggingskilder.map((innlogginskilde: Innloggingskilde) => (
         <Hovedknapp
             key={innlogginskilde.part}
-            style={innlogginskilde.part === "MENTOR" ? ((!mentorToggle || !mentorVisesIdevOmFeatureToggleIkkeKanNås) ? {display:"none"}: {}): {}} //TODO: MENTOR TOGGLE her!
+            style={innlogginskilde.part === "MENTOR" ? (!mentorVisesIdevOmFeatureToggleIkkeKanNås ? {display:"none"}: {}): {}} //TODO: MENTOR TOGGLE her!
             className="innloggingsside__logginnKnapp"
             onClick={() => {
                 setCookie(INNLOGGET_PART, innlogginskilde.part, { path: '/tiltaksgjennomforing' });
