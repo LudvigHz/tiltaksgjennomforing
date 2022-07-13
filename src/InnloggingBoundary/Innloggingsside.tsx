@@ -28,7 +28,7 @@ const Innloggingsside = (props: { innloggingskilder: Innloggingskilde[] }) => {
     const visFeilmelding = useContext(FeilVarselContext);
     const featureToggleContext = useContext(FeatureToggleContext);
     const mentorToggle = featureToggleContext[Feature.Mentor];
-
+    console.log("ENV: **** ",process.env );
     const loginKlikk = async (innloggingskilde: Innloggingskilde) => {
         try {
             await hentInnloggetBruker();
