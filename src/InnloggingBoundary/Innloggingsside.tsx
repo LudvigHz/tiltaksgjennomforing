@@ -24,7 +24,7 @@ const Innloggingsside = (props: { innloggingskilder: Innloggingskilde[] }) => {
     const throwError = useAsyncError();
     const [, setCookie] = useCookies();
     const visFeilmelding = useContext(FeilVarselContext);
-    const mentorVisesIdevOmFeatureToggleIkkeKanNås = window.location.href.includes("tiltaksgjennomforing.dev.nav.no") ||  window.location.href.includes("localhost");
+    const mentorVisesIdevOmFeatureToggleIkkeKanNås = window.location.href.includes("tiltaksgjennomforing.dev.nav.no") ||  window.location.href.includes("localhost") ||  window.location.href.includes("arbeidsgiver.labs.");
     const loginKlikk = async (innloggingskilde: Innloggingskilde) => {
         try {
             await hentInnloggetBruker();
