@@ -131,6 +131,7 @@ const EndreOmMentor: FunctionComponent = () => {
                 }}
                 href="#"
                 role="menuitem"
+                aria-label="Endre om Mentor"
             >
                 <div style={{ marginRight: '0.5rem' }} aria-hidden={true}>
                     <Task />

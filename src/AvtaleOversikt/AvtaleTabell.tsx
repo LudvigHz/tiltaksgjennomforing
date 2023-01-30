@@ -121,6 +121,7 @@ const AvtaleTabell: FunctionComponent<{
                     return (
                         <div key={avtale.id} className={cls.element('linkpanel')}>
                             <LinkPanel
+                                href="#"
                                 border={false}
                                 id={avtale.id}
                                 key={avtale.id}

@@ -20,7 +20,7 @@ const BannerNAVAnsatt: React.FunctionComponent<Props> = (props) => {
         <div className={'banner-veileder-container'}>
             <div className="banner-veileder" role="banner">
                 <div>
-                    <Heading size="large" role="heading" aria-level={1}>
+                    <Heading size="large" role="heading" aria-level={2}>
                         {props.tekst}
                     </Heading>
 

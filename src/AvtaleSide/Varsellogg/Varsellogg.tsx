@@ -36,6 +36,7 @@ const Varsellogg: FunctionComponent = () => {
                 href="#"
                 className={cls.element('menylenke')}
                 role="menuitem"
+                aria-label="Hendelselogg"
             >
                 <div aria-hidden={true}>
                     <BurgerMenyIkon className={cls.element('burger-ikon')} />

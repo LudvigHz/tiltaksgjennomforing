@@ -16,7 +16,7 @@ interface Props {
     disabled?: boolean;
 }
 
-const PakrevdTextarea: React.FunctionComponent<Props> = props => {
+const PakrevdTextarea: React.FunctionComponent<Props> = (props) => {
     const [feil, setFeil, sjekkInputfelt] = usePaakrevd(props.verdi, props.label, props.feilmelding);
 
     const lagTellerTekst = (antallTegn: number, maxLength: number) => {
@@ -25,6 +25,7 @@ const PakrevdTextarea: React.FunctionComponent<Props> = props => {
 
     return (
         <Textarea
+            autoComplete="off"
             aria-label={props.label}
             aria-labelledby={props.labelledby}
             disabled={props.disabled}

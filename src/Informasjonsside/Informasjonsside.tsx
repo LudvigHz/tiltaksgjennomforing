@@ -116,7 +116,7 @@ const Informasjonsside: FunctionComponent<RouteComponentProps> = (props) => {
                             </ul>
                             <br />
                             <span className={cls.element('lenke')}>
-                                <Link onClick={() => setVideoModalOpen(true)} href="#">
+                                <Link onClick={() => setVideoModalOpen(true)} href="#" aria-label="Se video om hvordan tilgang i Altinn styres.">
                                     Se video om hvordan tilgang i Altinn styres.
                                 </Link>
                             </span>

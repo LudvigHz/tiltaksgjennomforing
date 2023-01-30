@@ -34,7 +34,7 @@ const OpprettelseFullfortVeileder: React.FunctionComponent<RouteComponentProps<{
 
     const veilederpanel = (
         <VeilederpanelMedAvsjekkIkon>
-            <Heading size="medium" className="opprettelseFullfortVeileder__innholdstittel">
+            <Heading size="medium" level="2" className="opprettelseFullfortVeileder__innholdstittel">
                 Avtalen er opprettet
             </Heading>
             {inputLabel}

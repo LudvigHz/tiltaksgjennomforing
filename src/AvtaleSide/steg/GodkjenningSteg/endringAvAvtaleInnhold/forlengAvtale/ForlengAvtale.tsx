@@ -93,6 +93,7 @@ const ForlengAvtale: FunctionComponent = () => {
                         display: 'flex',
                         alignItems: 'center',
                     }}
+                    aria-label="Forleng avtale"
                 >
                     <div aria-hidden={true}>
                         <Notes style={{ marginRight: '0.5rem' }} />

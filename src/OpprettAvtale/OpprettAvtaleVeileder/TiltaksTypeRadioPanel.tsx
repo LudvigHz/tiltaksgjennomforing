@@ -26,7 +26,9 @@ const TiltaksTypeRadioPanel: FunctionComponent<Props> = ({
     const cls = BEMHelper(className);
     return (
         <Innholdsboks className={cls.element('valg-tiltakstype-container')}>
-            <Heading size="medium">Velg type avtale</Heading>
+            <Heading size="medium" level="2">
+                Velg type avtale
+            </Heading>
             <BodyShort size="small" className={cls.element('valg-tiltakstype-tekst')}>
                 Ønsker du å vite mer om de ulike støtteordningene finner du informasjon på NAV sine sider{' '}
                 <EksternLenke

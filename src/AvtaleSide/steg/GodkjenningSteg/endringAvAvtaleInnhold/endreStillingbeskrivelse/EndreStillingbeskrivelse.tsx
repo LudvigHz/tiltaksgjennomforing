@@ -108,6 +108,7 @@ const EndreStillingbeskrivelse: FunctionComponent = () => {
                 href="#"
                 role="menuitem"
                 className={cls.element('lenke')}
+                aria-label="Endre stillingsbeskrivelse"
             >
                 <div aria-hidden={true}>
                     <DialogDots className={cls.element('ikon')} />

@@ -30,7 +30,9 @@ const Banner: React.FunctionComponent<Props> = (props) => {
                     organisasjoner={innloggetBruker.altinnOrganisasjoner}
                     sidetittel={
                         <>
-                            <Heading size="large">{props.tekst}</Heading>
+                            <Heading level="1" size="large">
+                                {props.tekst}
+                            </Heading>
                             {props.undertittel && (
                                 <Detail style={{ marginTop: '0.25rem', fontWeight: 'bold' }}>
                                     {props.undertittel}

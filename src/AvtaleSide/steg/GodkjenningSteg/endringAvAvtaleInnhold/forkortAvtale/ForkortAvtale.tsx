@@ -126,6 +126,7 @@ const ForkortAvtale: FunctionComponent = () => {
                         display: 'flex',
                         alignItems: 'center',
                     }}
+                    aria-label="Forkort avtale"
                 >
                     <div aria-hidden={true}>
                         <Notes style={{ marginRight: '0.5rem' }} />

@@ -34,6 +34,7 @@ const TiltakstypeFilter: FunctionComponent<FiltreringMedBeslutterProps> = (props
             {tiltakstyper.map((tiltakstype) => (
                 <Fragment key={tiltakstype.label}>
                     <Radio
+                        aria-label={tiltakstype.label}
                         label={tiltakstype.label}
                         name={'tiltakstype'}
                         value={tiltakstype.value}

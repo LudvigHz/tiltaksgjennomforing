@@ -135,6 +135,7 @@ const EndreTilskuddsberegning: FunctionComponent = () => {
                 href="#"
                 role="menuitem"
                 className={cls.element('lenke')}
+                aria-label="Endre tilskuddsberegning"
             >
                 <div aria-hidden={true}>
                     <Task className={cls.element('ikon')} />

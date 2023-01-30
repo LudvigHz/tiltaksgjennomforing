@@ -11,7 +11,7 @@ const DelLenkeTilAvtalen: FunctionComponent = () => {
 
     return (
         <>
-            <Link onClick={() => setOpen(true)} href="#" role="menuitem" className={cls.element('link')}>
+            <Link onClick={() => setOpen(true)} href="#" role="menuitem" aria-label="Del lenke til avtalen" className={cls.element('link')}>
                 <div aria-hidden={true}>
                     <ShareIkon className={cls.element('ikon')} />
                 </div>

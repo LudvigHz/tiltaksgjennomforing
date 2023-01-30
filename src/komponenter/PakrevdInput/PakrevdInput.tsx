@@ -7,6 +7,7 @@ interface Props extends InputProps {
     verdi: string | number | undefined;
     feilmelding?: string;
     settVerdi: (verdi: string) => void;
+    autoComplete?: string;
 }
 
 const PakrevdInput: React.FunctionComponent<Props> = (props) => {
@@ -14,6 +15,7 @@ const PakrevdInput: React.FunctionComponent<Props> = (props) => {
     const [feil, setFeil, sjekkInputfelt] = usePaakrevd(verdi ? verdi.toString() : '', label, feilmelding);
     return (
         <Input
+            autoComplete={props.autoComplete}
             label={label}
             value={props.verdi || ''}
             feil={feil}

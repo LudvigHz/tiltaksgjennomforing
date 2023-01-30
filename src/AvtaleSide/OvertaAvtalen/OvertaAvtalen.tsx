@@ -28,6 +28,7 @@ const OvertaAvtalen = (props: Props) => {
                     href="#"
                     className={cls.element('link')}
                     role="menuitem"
+                    aria-label="Overta avtale"
                 >
                     <div aria-hidden={true}>
                         <OvertaAvtalenSVG className={cls.element('ikon')} />

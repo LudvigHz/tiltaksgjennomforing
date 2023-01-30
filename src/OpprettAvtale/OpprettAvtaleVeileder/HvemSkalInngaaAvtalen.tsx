@@ -51,7 +51,9 @@ const HvemSkalInngaaAvtalen: React.FC<Props> = ({
 }) => {
     return (
         <Innholdsboks>
-            <Heading size="medium">Hvem skal inngå i avtalen?</Heading>
+            <Heading size="medium" level="2">
+                Hvem skal inngå i avtalen?
+            </Heading>
             <VerticalSpacer rem={1} />
             <Input
                 className="typo-element"

@@ -69,6 +69,7 @@ const EndreMaal: FunctionComponent = () => {
                     }}
                     href="#"
                     role="menuitem"
+                    aria-label="Endre mål"
                     style={{
                         display: 'flex',
                         alignItems: 'center',

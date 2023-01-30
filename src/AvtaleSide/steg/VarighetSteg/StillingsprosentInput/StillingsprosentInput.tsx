@@ -26,6 +26,7 @@ const StillingsprosentInput = (props: Props) => {
         <Input
             feil={feil}
             className="stillingsprosent-input"
+            autoComplete="off"
             label={props.label}
             value={props.verdi || ''}
             onChange={(event) => {

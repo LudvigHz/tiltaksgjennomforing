@@ -19,22 +19,25 @@ const ArbeidsgiverinfoDel = () => {
                     <div className={cls.element('rad')}>
                         <PakrevdInput
                             label="Bedriftens navn"
+                            autoComplete="off"
                             verdi={avtale.gjeldendeInnhold.bedriftNavn}
                             settVerdi={(verdi) => settAvtaleVerdi('bedriftNavn', verdi)}
                         />
 
-                        <Input label="Virksomhetsnummer" value={avtale.bedriftNr} disabled={true} />
+                        <Input label="Virksomhetsnummer" autoComplete="off" value={avtale.bedriftNr} disabled={true} />
                     </div>
                 </SkjemaGruppe>
                 <SkjemaGruppe title="Kontaktperson for avtalen" className={cls.element('skjemagruppe')}>
                     <div className={cls.element('rad')}>
                         <PakrevdInput
-                            label="Fornavn"
+                            label="Arbeidsgiver Fornavn"
+                            autoComplete="given-name"
                             verdi={avtale.gjeldendeInnhold.arbeidsgiverFornavn}
                             settVerdi={(verdi) => settAvtaleVerdi('arbeidsgiverFornavn', verdi)}
                         />
                         <PakrevdInput
-                            label="Etternavn"
+                            label="Arbeidsgiver Etternavn"
+                            autoComplete="family-name"
                             verdi={avtale.gjeldendeInnhold.arbeidsgiverEtternavn}
                             settVerdi={(verdi) => settAvtaleVerdi('arbeidsgiverEtternavn', verdi)}
                         />
@@ -42,7 +45,7 @@ const ArbeidsgiverinfoDel = () => {
 
                     <div className={cls.element('rad')}>
                         <TelefonnummerInput
-                            label="Mobilnummer"
+                            label="Arbeidsgiver Mobilnummer"
                             verdi={avtale.gjeldendeInnhold.arbeidsgiverTlf}
                             settVerdi={(verdi) => settAvtaleVerdi('arbeidsgiverTlf', verdi)}
                         />

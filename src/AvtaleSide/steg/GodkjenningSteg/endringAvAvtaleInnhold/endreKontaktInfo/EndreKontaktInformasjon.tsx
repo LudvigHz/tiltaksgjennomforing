@@ -176,6 +176,7 @@ const EndreKontaktInformasjon: FunctionComponent = () => {
                 href="#"
                 role="menuitem"
                 className={cls.element('link')}
+                aria-label="Endre kontaktinformasjon"
             >
                 <div aria-hidden={true}>
                     <Neutral className={cls.element('ikon')} />

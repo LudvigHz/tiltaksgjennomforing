@@ -167,6 +167,7 @@ const BeregningTilskuddSteg: FunctionComponent = () => {
                         bredde="s"
                         options={arbeidsgiveravgiftAlternativer}
                         label="Sats for arbeidsgiveravgift"
+                        autoComplete="off"
                         children=""
                         value={avtale.gjeldendeInnhold.arbeidsgiveravgift}
                         onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>

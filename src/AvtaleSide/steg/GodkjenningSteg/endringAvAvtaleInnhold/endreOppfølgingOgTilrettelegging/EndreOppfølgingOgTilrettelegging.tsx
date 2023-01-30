@@ -81,6 +81,7 @@ const EndreOppfølgingOgTilrettelegging: FunctionComponent = () => {
                 href="#"
                 role="menuitem"
                 className={cls.element('lenke')}
+                aria-label="Endre oppfølging og tilrettelegging"
             >
                 <div aria-hidden={true}>
                     <MeetingRoom className={cls.element('ikon')} />

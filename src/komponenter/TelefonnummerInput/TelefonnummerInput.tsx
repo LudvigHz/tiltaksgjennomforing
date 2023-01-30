@@ -48,6 +48,7 @@ const TelefonnummerInput: React.FunctionComponent<Props> = (props) => {
     return (
         <div className={cls.className}>
             <Input
+                autoComplete="tel"
                 bredde="S"
                 label={props.label}
                 value={telefonnummer || ''}

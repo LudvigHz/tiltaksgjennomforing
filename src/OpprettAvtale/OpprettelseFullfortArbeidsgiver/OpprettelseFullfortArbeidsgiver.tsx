@@ -18,7 +18,7 @@ const OpprettelseFullfortArbeidsgiver: React.FunctionComponent<RouteComponentPro
 
             <div className="opprettelseFullfortArbeidsgiver">
                 <VeilederpanelMedAvsjekkIkon>
-                    <Heading size="medium" className="opprettelseFullfortArbeidsgiver__innholdstittel">
+                    <Heading size="medium" level="2" className="opprettelseFullfortArbeidsgiver__innholdstittel">
                         Avtalen er opprettet
                     </Heading>
                     <BodyShort size="small" className="opprettelseFullfortArbeidsgiver__undertittel">

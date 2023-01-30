@@ -94,6 +94,7 @@ const EndreInkluderingsutgifter: FunctionComponent = () => {
                 }}
                 href="#"
                 role="menuitem"
+                aria-label="Legg til inkluderingstilskudd"
             >
                 <div style={{ marginRight: '0.5rem' }} aria-hidden={true}>
                     <Task />

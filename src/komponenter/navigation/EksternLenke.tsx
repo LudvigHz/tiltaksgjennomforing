@@ -28,22 +28,4 @@ const EksternLenke: React.FunctionComponent<EksternLenkeProps> = (props) => {
     );
 };
 
-/*
-const EksternLenke: React.FunctionComponent<Props> = (props) => {
-    const onClick = (event: any) => {
-        amplitude.logEvent('#tiltak-ekstern-lenke-klikket', {
-            url: event.target.href,
-        });
-    };
-    return (
-        <>
-            <Link target="_blank" onClick={onClick} {...props}>
-                {props.children}
-                <TilEkstern focusable="false" className="ekstern-lenke-icon" />
-            </Link>
-        </>
-    );
-};
-*/
-
 export default EksternLenke;

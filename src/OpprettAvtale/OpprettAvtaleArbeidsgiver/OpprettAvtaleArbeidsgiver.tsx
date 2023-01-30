@@ -108,7 +108,9 @@ const OpprettAvtaleArbeidsgiver: FunctionComponent = () => {
             <Banner tekst="Opprett avtale" />
             <div className={cls.className}>
                 <Innholdsboks>
-                    <Heading size="medium">Før du oppretter en avtale</Heading>
+                    <Heading size="medium" level="2">
+                        Før du oppretter en avtale
+                    </Heading>
                     <BodyShort size="small">
                         Er det første gang du skal opprette en avtale bør du lese gjennom {''}
                         <EksternLenke href={`${basename}${pathTilInformasjonssideInnlogget}`}>
@@ -164,6 +166,7 @@ const OpprettAvtaleArbeidsgiver: FunctionComponent = () => {
                     <Input
                         className="typo-element"
                         label="Deltakers fødselsnummer"
+                        autoComplete="off"
                         value={deltakerFnr}
                         bredde={'L'}
                         onChange={(event) => setFnrBrukerOnChange(event, setDeltakerFnr, setDeltakerFnrFeil)}
@@ -175,6 +178,7 @@ const OpprettAvtaleArbeidsgiver: FunctionComponent = () => {
                         className="typo-element"
                         bredde={'L'}
                         label="Opprettes på bedrift"
+                        autoComplete="off"
                         description="Virksomhetsnummeret må være det samme som der det blir registrert inntekt for deltaker i A-meldingen."
                         value={`${valgtBedriftNavn} (${valgtBedriftNr})`}
                         disabled={true}
