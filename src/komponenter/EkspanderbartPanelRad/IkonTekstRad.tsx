@@ -8,7 +8,8 @@ interface Props {
     classname?: string;
     headerTekst?: {
         tekst: string;
-        headingType?: HeadingProps["size"];
+        headingType?: HeadingProps['size'];
+        level?: HeadingProps['level'];
     };
 }
 
@@ -18,7 +19,11 @@ const IkonTekstRad: React.FunctionComponent<Props> = (props) => {
     const { svgIkon, headerTekst, classname, children } = props;
     let header = null;
     if (headerTekst?.headingType) {
-        header = <Heading size={headerTekst.headingType}>{headerTekst.tekst}</Heading>;
+        header = (
+            <Heading level={headerTekst.level} size={headerTekst.headingType}>
+                {headerTekst.tekst}
+            </Heading>
+        );
     } else if (headerTekst) {
         header = <Label>{headerTekst?.tekst}</Label>;
     }

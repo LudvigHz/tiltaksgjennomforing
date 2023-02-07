@@ -34,6 +34,7 @@ const Informasjonsside: FunctionComponent<RouteComponentProps> = (props) => {
             headerTekst={{
                 tekst: 'NAV eller arbeidsgiver oppretter en avtale',
                 headingType: 'small',
+                level: '3',
             }}
         >
             <VerticalSpacer rem={1} />
@@ -62,7 +63,9 @@ const Informasjonsside: FunctionComponent<RouteComponentProps> = (props) => {
 
                     <div className={cls.element('innhold')}>
                         <div className={cls.element('innholdstittel')}>
-                            <Heading size="large">Hvordan fungerer løsningen?</Heading>
+                            <Heading level="2" size="large">
+                                Hvordan fungerer løsningen?
+                            </Heading>
                         </div>
                         <div className={cls.element('ingress')}>
                             <BodyShort size="small">
@@ -83,6 +86,7 @@ const Informasjonsside: FunctionComponent<RouteComponentProps> = (props) => {
                             headerTekst={{
                                 tekst: 'Flere parter i samme digitale løsning',
                                 headingType: 'small',
+                                level: '3',
                             }}
                         >
                             Deltakeren, arbeidsgiveren og NAV fyller ut, ser over og godkjenner avtalen i samme løsning
@@ -101,6 +105,7 @@ const Informasjonsside: FunctionComponent<RouteComponentProps> = (props) => {
                             headerTekst={{
                                 tekst: 'Tilgang og innlogging til avtalen',
                                 headingType: 'small',
+                                level: '3',
                             }}
                         >
                             Deltakeren og arbeidsgiveren logger seg inn i avtalen via ID-porten. Tilgangen for
@@ -116,7 +121,11 @@ const Informasjonsside: FunctionComponent<RouteComponentProps> = (props) => {
                             </ul>
                             <br />
                             <span className={cls.element('lenke')}>
-                                <Link onClick={() => setVideoModalOpen(true)} href="#" aria-label="Se video om hvordan tilgang i Altinn styres.">
+                                <Link
+                                    onClick={() => setVideoModalOpen(true)}
+                                    href="#"
+                                    aria-label="Se video om hvordan tilgang i Altinn styres."
+                                >
                                     Se video om hvordan tilgang i Altinn styres.
                                 </Link>
                             </span>
@@ -140,6 +149,7 @@ const Informasjonsside: FunctionComponent<RouteComponentProps> = (props) => {
                             headerTekst={{
                                 tekst: 'En dynamisk avtale',
                                 headingType: 'small',
+                                level: '3',
                             }}
                         >
                             Innholdet i avtalen kan endres gjennom hele perioden for tiltaket. Etter at avtalen er
@@ -154,6 +164,7 @@ const Informasjonsside: FunctionComponent<RouteComponentProps> = (props) => {
                             headerTekst={{
                                 tekst: 'Avtalens historikk',
                                 headingType: 'small',
+                                level: '3',
                             }}
                         >
                             Hvis det gjøres endringer i avtalen underveis i tiltaket, lagrer NAV den forrige, godkjente

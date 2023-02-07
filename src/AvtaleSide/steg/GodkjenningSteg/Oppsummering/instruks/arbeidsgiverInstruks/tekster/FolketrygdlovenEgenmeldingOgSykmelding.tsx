@@ -17,6 +17,7 @@ const FolketrygdlovenEgenmeldingOgSykmelding: FunctionComponent<Props> = ({ tilt
             headerTekst={{
                 tekst: 'Folketrygdloven: egenmelding og sykmelding',
                 headingType: 'small',
+                level: '3',
             }}
         >
             <p>

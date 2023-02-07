@@ -19,7 +19,7 @@ const BehandlingAvPersonopplysninger: React.FC<Props> = ({ tiltakstype }) => {
     return (
         <IkonTekstRad
             svgIkon={<Passport width="2.25rem" height="2.25rem" />}
-            headerTekst={{ tekst: 'Behandling av personopplysninger' }}
+            headerTekst={{ tekst: 'Behandling av personopplysninger', level: '3' }}
         >
             <p>
                 Du kan ikke sende taushetsbelagte og sensitive personopplysninger til NAV på usikret epost. Skal du gi

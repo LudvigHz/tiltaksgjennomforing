@@ -16,7 +16,7 @@ const TilskuddsperiodeOgRefusjon: FunctionComponent<Props> = ({ erPilot, tiltaks
     return (
         <IkonTekstRad
             svgIkon={<Money width="2.25rem" height="2.25rem" />}
-            headerTekst={{ tekst: 'Tilskuddsperiode og refusjon', headingType: 'small' }}
+            headerTekst={{ tekst: 'Tilskuddsperiode og refusjon', headingType: 'small', level: '3' }}
         >
             <p>
                 Godkjent tilskuddsperiode {!erPilot && <>i tilskuddsbrevet</>} er styrende i henhold til økonomisk
@@ -30,8 +30,8 @@ const TilskuddsperiodeOgRefusjon: FunctionComponent<Props> = ({ erPilot, tiltaks
                 blir brukt riktig.
             </p>
             <p>
-                Endringer i lønn etterbetales ikke, og vil først kunne gjelde for tilskuddsperioder
-                som ikke allerede er godkjente ved tidspunktet for endringen.
+                Endringer i lønn etterbetales ikke, og vil først kunne gjelde for tilskuddsperioder som ikke allerede er
+                godkjente ved tidspunktet for endringen.
             </p>
             <p>
                 For å behandle refusjonen må du logge deg inn i refusjonsløsningen:

@@ -7,7 +7,7 @@ const BehandlingAvPersonopplysninger: FunctionComponent = () => {
     return (
         <IkonTekstRad
             svgIkon={<Passport width="2.25rem" height="2.25rem" />}
-            headerTekst={{ tekst: 'Behandling av personopplysninger', headingType: 'small' }}
+            headerTekst={{ tekst: 'Behandling av personopplysninger', headingType: 'small', level: '3' }}
         >
             <p>
                 Dere har ansvar for å følge{' '}

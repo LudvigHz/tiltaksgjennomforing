@@ -18,6 +18,7 @@ const YrkesskadeforsikringOgSkadeerstatning: FunctionComponent<Props> = ({ tilta
             headerTekst={{
                 tekst: 'Yrkesskadeforsikring og skadeerstatning',
                 headingType: 'small',
+                level: '3',
             }}
         >
             <p>

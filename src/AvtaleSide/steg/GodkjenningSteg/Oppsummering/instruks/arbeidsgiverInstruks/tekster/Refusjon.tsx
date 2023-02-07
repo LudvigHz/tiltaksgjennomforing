@@ -15,7 +15,7 @@ const Refusjon: FunctionComponent<Props> = ({ tiltakstype }) => {
     return (
         <IkonTekstRad
             svgIkon={<Money width="2.25rem" height="2.25rem" />}
-            headerTekst={{ tekst: 'Refusjon', headingType: 'small' }}
+            headerTekst={{ tekst: 'Refusjon', headingType: 'small', level: '3' }}
         >
             <p>
                 For å få utbetalt pengene må dere sende inn refusjonskrav til NAV etter at tilskuddsperioden er over.
